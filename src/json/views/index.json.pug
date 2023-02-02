@@ -1,0 +1,10 @@
+extends ../templates/_root
+
+append content
+  at-context http://www.schema.org
+  at-type WebPage
+  at-id= root + '#webpage'
+  name Hello World
+  description Example page from the gulp-pug-tachyons-rig template repo.
+  url= root
+  +accessibility()

@@ -1,0 +1,19 @@
+@use 'sass:map';
+
+$breakpoints: ('-ns': '768px', '-l': '1024px', '-xl': '1350px');
+
+@mixin suffixer {
+  @content('');
+  @each $s, $w in $breakpoints {
+    @media screen and (min-width: #{$w}) {
+      @content($s);
+    }
+  }
+}
+
+@include suffixer using ($s) {
+  @import 'utilities/_tachyons';
+  @import 'utilities/_custom';
+}
+
+@import 'partials/_main';

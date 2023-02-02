@@ -1,0 +1,11 @@
+# tachyon beam transients
+src/json/output
+src/scss/partials/_*
+docs/css/normalize.css
+docs/css/styles.css
+
+# dependencies
+node_modules/
+
+# os
+.DS_Store
